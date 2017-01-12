@@ -1,0 +1,123 @@
+$mustache-width: 3em;
+$mustache-h: 2em;
+$mustache-offset-y: 0em;
+$mustache-offset-x: 3.75em;
+$mustache-angle: 30deg;
+
+$_ox: $mustache-offset-x*.5 - $mustache-width*.25;
+$_oy: $mustache-width*.5 + $mustache-offset-y + ($mustache-width*.25*1.732);
+// 1.732 = tan(30deg)
+$debug: false;
+// $debug: true;
+
+.mustache {
+  position: relative;
+  width: $mustache-width;
+  height: $mustache-width;
+  border-radius: 50%;
+  font-size: 6vmin;
+  box-shadow:
+    $_ox $_oy,
+    -$_ox $_oy;
+
+  @if $debug {
+    background-color: rgba(#f00, .5);
+    color: rgba(#000, .5);
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: $mustache-width - $mustache-h + $mustache-offset-y;
+    width: $mustache-width + $mustache-h;
+    height: $mustache-width + $mustache-h;
+    border-bottom: $mustache-width solid;
+  }
+  
+
+
+  &::before {
+    right: ($mustache-width + $mustache-offset-x) / 2;
+    border-bottom-left-radius: 100%;
+    transform: rotate(-$mustache-angle);
+    transform-origin: 100% $mustache-h;
+  }
+
+  &::after {
+    left: ($mustache-width + $mustache-offset-x) / 2;
+    border-bottom-right-radius: 100%;
+    transform: rotate($mustache-angle);
+    transform-origin: 0% $mustache-h;
+  }
+}
+
+.mustache:hover {
+    &::before {
+      transform: rotate(-$mustache-angle + 10deg);
+    }
+    &::after {
+      transform: rotate($mustache-angle - 10deg);
+    }
+}
+
+.box {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/// reset
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.intro {
+  width: 90%;
+  max-width: 36rem;
+  padding-bottom: 1rem;
+  margin: 0 auto 1em;
+  padding-top: .5em;
+  font-size: calc(1rem + 2vmin);
+  text-transform: capitalize;
+  border-bottom: 1px dashed rgba(#000, .3);
+  text-align: center;
+
+  small {
+    display: block;
+    opacity: .5;
+    font-style: italic;
+    text-transform: none;
+  }
+}
+
+.info {
+  margin: 0;
+  padding: 1em;
+  font-size: .9em;
+  font-style: italic;
+  font-family: serif;
+  text-align: right;
+  opacity: .5;
+
+  a {
+    color: inherit;
+  }
+}

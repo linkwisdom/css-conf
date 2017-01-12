@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <title>前端插画-CSS隐藏绘画技巧</title>
+        <link rel="stylesheet" href="reveal/css/reveal.css">
+        <link rel="stylesheet" href="reveal/css/theme/black.css">
+        <!-- Theme used for syntax highlighting of code -->
+        <link rel="stylesheet" href="reveal/lib/css/zenburn.css">
+        <style type="text/css">
+        .reveal .progress span {
+            background: #333;
+            border: 2px solid #C11;
+            border-width: 0;
+            border-right-width: 5px;
+        }
+        .reveal .slide-background  {
+            background-color: #000;
+        }
+        .reveal h1 {
+            text-shadow: -1px -1px 0 #fff, 1px 1px 0 #333, 1px 1px 0 #444;
+            color: #ccc;
+        }
+        .reveal table th,
+        .reveal table td {
+            border-bottom: 1px solid #555!important;
+        }
+        </style>
+        <!-- Printing and PDF exports -->
+        <script>
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal/css/print/pdf.css' : 'reveal/css/print/paper.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>
+    </head>
+    <body>
+        <div class="reveal">
+            <link rel="import" href="./pages/css-show.html">
+            <link rel="import" href="./pages/introduction.html">
+            <link rel="import" href="./pages/box-model.html">
+            <link rel="import" href="./pages/border-radius.html">
+            <link rel="import" href="./pages/box-shadow.html">
+            <link rel="import" href="./pages/css-icon-demo.html">
+            <link rel="import" href="./pages/css-clip-path.html">
+            <link rel="import" href="./pages/css-transform.html">
+            <link rel="import" href="./pages/css-variable.html">
+            <link rel="import" href="./pages/css-transition.html">
+            <link rel="import" href="./pages/css-animate.html">
+            <link rel="import" href="./pages/css-motion-path.html">
+            <link rel="import" href="./pages/css-image-demo.html">
+            <link rel="import" href="./pages/other-sites.html">
+            <div class="slides"></div>
+        </div>
+        <script>
+        var slides = document.querySelector('.slides');
+        var links = document.querySelectorAll('link[rel="import"]');
+        for (let link of links) {
+            try {
+                let sections = link.import.body.querySelectorAll('section')
+                for (section of sections) {
+                    slides.appendChild(section)
+                }
+            }
+            catch (ex) {
+                //
+            }
+        }
+        </script>
+
+        <script src="reveal/lib/js/head.min.js"></script>
+        <script src="reveal/js/reveal.js"></script>
+        <script type="text/javascript">
+        setTimeout(()=>{
+            // More info https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                history: true,
+                width: 1500,
+                // More info https://github.com/hakimel/reveal.js#dependencies
+                dependencies: [
+                    { src: 'reveal/plugin/markdown/marked.js' },
+                    { src: 'reveal/plugin/markdown/markdown.js' },
+                    { src: 'reveal/plugin/notes/notes.js', async: true },
+                    { src: 'reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+                ]
+            });
+        }, 500);
+        </script>
+
+        <script type="text/javascript">
+            var root = document.documentElement;
+            document.addEventListener('mousemove', evt => {
+                let x = evt.clientX / innerWidth
+                let y = evt.clientY / innerHeight
+                root.style.setProperty('--mouse-x', x)
+                root.style.setProperty('--mouse-y', y)
+            })
+        </script>
+    </body>
+</html>

@@ -1,0 +1,101 @@
+<section id="css-icon-index" data-markdown>
+# 图标 [ Icon ]
+> 用一个标签元素代替一张图片
+</section>
+
+<section id="css-icon-image">
+<div>
+    <div class="picture icon"></div>
+</div>
+<div class="fragment editor-box" style="border:none" data-markdown>
+    ```css
+        .picture.icon {
+          color: #333;
+          position: absolute;
+          margin-left: 2px;
+          margin-top: 2px;
+          width: 105px;
+          height: 105px;
+          border-radius: 2px;
+          overflow: hidden;
+          border: solid 1px currentColor;
+          box-shadow: 2px 2px 15px 10px #EEE;
+        }
+
+    .picture.icon:before {
+        content: '';
+        ...
+    }
+
+    .picture.icon:after {
+        content: '';
+        ...
+    }
+
+    ```  
+</div>
+
+</section>
+
+<section id="css-icon-site">
+    <iframe scrolling='no' 
+    src='http://cssicon.space/' style="background: rgba(255,255,255,0.6);"
+    frameborder='no' allowtransparency='true' allowfullscreen='true'>
+    </iframe>
+</section>
+
+<style type="text/css">
+iframe {
+    width: 90vw;
+    height: 90vh;
+    background: transparent;
+}
+
+#css-icon-image .picture {
+    left: 40%;
+    top: 30%;
+}
+
+#css-icon-image .editor-box {
+    overflow-y: hidden;
+    border: none;
+}
+
+.picture.icon {
+  color: #333;
+  position: absolute;
+  margin-left: 2px;
+  margin-top: 2px;
+  width: 105px;
+  height: 105px;
+  border-radius: 2px;
+  overflow: hidden;
+  border: solid 1px currentColor;
+  box-shadow: 2px 2px 15px 10px #EEE;
+}
+
+.picture.icon:before {
+    content: '';
+    position: absolute;
+    left: 10%;
+    top: 10%;
+    width: 30%;
+    height: 30%;
+    background: red;
+    border-radius: 50%;
+    border: solid 1px red;
+}
+
+.picture.icon:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 60%;
+    width: 90%;
+    height: 90%;
+    background: green;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+</style>

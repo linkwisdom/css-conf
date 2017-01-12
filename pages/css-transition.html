@@ -1,0 +1,97 @@
+<section data-markdown>
+<script type="text/template">
+# 过渡 [ Transition ]
+
+> 平缓地、渐进地改变元素属性
+
+</script>
+</section>
+
+<section>
+<table class="dataintable">
+<tbody>
+<tr><th style="width:30%;">值</th><th>描述</th></tr>
+<tr><td>transition-property</td><td>规定设置过渡效果的 CSS 属性的名称。</td></tr>
+<tr><td>transition-duration</td><td>规定完成过渡效果需要多少秒或毫秒。</td></tr>
+<tr><td>transition-timing-function</td><td>规定速度效果的速度曲线。</td></tr>
+<tr><td>transition-delay</td><td>定义过渡效果何时开始。</td></tr>
+</tbody></table>
+</section>
+
+<section id="transitionBox">
+    <div class="wave-box" onclick="activeBox()"></div>
+    <div class="gradient-box" onclick="activeBox()"></div>
+</section>
+
+<section>
+<div data-markdown>
+# 贝塞尔曲线 [ cubic bezier ]
+</div>
+
+</section>
+
+<section>
+    <iframe data-src="http://cubic-bezier.com/#.76,.14,.35,1"></iframe>
+</section>
+
+
+<style type="text/css">
+
+.gradient-box,
+.wave-box {
+    width: 30px;
+    height: 30px;
+    background: #FFF;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    margin-left: -5px;
+    margin-top: -5px;
+    cursor: pointer;
+}
+
+.gradient-box {
+    left: 70%;
+
+}
+
+.wave-box.active {
+    width: 200px;
+    height: 200px;
+    margin-left: -100px;
+    margin-top: -100px;
+    box-shadow: 0 0 5px 150px yellow,
+        0 0 10px 250px orange,
+        0 0 10px 400px orange,
+        0 0 25px 500px red;
+    transition: all 2s ease-out;
+}
+
+.gradient-box.active {
+    width: 800px;
+    height: 800px;
+    margin-left: -400px;
+    margin-top: -400px;
+    background: radial-gradient(#FFF, orange, orange, red, red);
+    box-shadow: 0 0 25px 15px red;
+    transition: all 2s ease-out;
+}
+
+</style>
+
+<script type="text/javascript">
+function activeBox() {
+    var target = event.target
+    target.classList.add('active')
+    setTimeout(()=>{
+        target.classList.remove('active')
+    }, 15000);
+}
+</script>
+
+<style type="text/css">
+.reveal.cube .slides section:not(.stack):after {
+    box-shadow: none;
+}
+</style>

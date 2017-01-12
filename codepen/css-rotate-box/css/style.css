@@ -1,0 +1,83 @@
+@-webkit-keyframes boxspin {
+  0% {
+    -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    -webkit-transform-origin: center center;
+  }
+  100% {
+    -webkit-transform: rotateX(180deg) rotateY(180deg) rotateZ(180deg);
+    -webkit-transform-origin: center center;
+  }
+}
+@-moz-keyframes boxspin {
+  0% {
+    -moz-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    -webkit-transform-origin: center center;
+  }
+  100% {
+    -moz-transform: rotateX(180deg) rotateY(180deg) rotateZ(180deg);
+    -webkit-transform-origin: center center;
+  }
+}
+.rotage-box {
+  position: relative;
+  min-width: 100px;
+  min-height: 100px;
+  top: 100px;
+  padding: 50px;
+}
+.rotage-box * {
+  margin: 0;
+  padding: 0;
+}
+.rotage-box .wrap {
+  height: 100%;
+  position: relative;
+  -webkit-transform-style: preserve-3d;
+  -webkit-perspective: 0px;
+  -moz-transform-style: preserve-3d;
+  -moz-perspective: 0px;
+  -webkit-animation: boxspin 5s ease infinite;
+  -moz-animation: boxspin 5s ease infinite;
+}
+.rotage-box .box {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -50px 0 0 -50px;
+  line-height: 100px;
+  text-align: center;
+  font-size: 16.66666667px;
+  color: white;
+}
+.rotage-box .box1 {
+  -webkit-transform: rotatey(90deg) translatez(-50px);
+  -moz-transform: rotatey(90deg) translatez(-50px);
+  background: rgba(128, 0, 128, 0.5);
+}
+.rotage-box .box2 {
+  -webkit-transform: rotatey(90deg) translatez(50px);
+  -moz-transform: rotatey(90deg) translatez(50px);
+  background: rgba(255, 0, 255, 0.5);
+}
+.rotage-box .box3 {
+  -webkit-transform: rotatex(90deg) translatez(50px);
+  -moz-transform: rotatex(90deg) translatez(50px);
+  background: rgba(255, 153, 204, 0.5);
+}
+.rotage-box .box4 {
+  -webkit-transform: rotatex(90deg) translatez(-50px);
+  -moz-transform: rotatex(90deg) translatez(-50px);
+  background: rgba(0, 204, 255, 0.5);
+}
+.rotage-box .box5 {
+  -webkit-transform: translatez(-50px);
+  -moz-transform: translatez(-50px);
+  background: rgba(153, 204, 255, 0.5);
+}
+.rotage-box .box6 {
+  -webkit-transform: translatez(50px);
+  -moz-transform: translatez(50px);
+  background: rgba(0, 255, 255, 0.5);
+}

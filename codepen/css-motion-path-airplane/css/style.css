@@ -1,0 +1,109 @@
+@import url(https://fonts.googleapis.com/css?family=Dosis);
+.st0 {
+  fill: #999999;
+  opacity: 0.5;
+}
+
+.st2 {
+  fill: #ffffff;
+}
+
+.st3 {
+  fill: #233752;
+}
+
+body {
+  background-color: #F1F1F1;
+  font-family: 'Dosis', sans-serif;
+}
+
+.wrapper {
+  width: 200px;
+  height: 200px;
+  margin: auto;
+  padding-right: 100px;
+  text-transform: uppercase;
+}
+.wrapper h2 {
+  position: absolute;
+  font-size: 90px;
+  left: calc(50% - 112.5px);
+  top: 150px;
+  color: #168590;
+  letter-spacing: 4.3px;
+  display: none;
+}
+.wrapper button {
+  position: absolute;
+  left: calc(50% - 50px);
+  background-color: #233752;
+  border: 2px solid #233752;
+  cursor: pointer;
+  color: #ffffff;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  font-family: 'Dosis', sans-serif;
+  font-size: 18px;
+  -webkit-transition: all .25s ease-in-out;
+  transition: all .25s ease-in-out;
+}
+.wrapper button:hover {
+  background-color: transparent;
+  color: #168590;
+}
+.wrapper button:focus {
+  outline: 0;
+}
+.wrapper svg {
+  cursor: pointer;
+  width: 100%;
+  motion-path: path("M180.3,318.3c0,0,19.8-73.6,84.7-73.2c89,0.4,120.5,149.7-29.5,149.7c-91,0-125.2-66.1-120-108.9c7.3-60,38.2-104,124.4-142.1C311.1,112.2,699.2,6.3,699.2,6.3");
+  -webkit-transform: rotate(60deg);
+          transform: rotate(60deg);
+  -webkit-transition: margin .25s ease-in-out;
+  transition: margin .25s ease-in-out;
+}
+.wrapper svg .st0 {
+  -webkit-transition: opacity .25s ease-in-out;
+  transition: opacity .25s ease-in-out;
+}
+.wrapper svg:hover {
+  margin-top: -10px;
+}
+.wrapper svg:hover .st0 {
+  opacity: 0;
+}
+.wrapper.active svg {
+  -webkit-animation: plane 1s ease-in;
+          animation: plane 1s ease-in;
+}
+@-webkit-keyframes plane {
+  0% {
+    motion-offset: 0;
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    motion-offset: 100%;
+    -webkit-transform: rotate(30deg);
+            transform: rotate(30deg);
+  }
+}
+@keyframes plane {
+  0% {
+    motion-offset: 0;
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    motion-offset: 100%;
+    -webkit-transform: rotate(30deg);
+            transform: rotate(30deg);
+  }
+}

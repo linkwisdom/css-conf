@@ -1,0 +1,75 @@
+<section id="motion-path" data-markdown>
+# 移动 [ motion path ]
+
+> 元素可沿着所定义的路径移动
+</section>
+
+<section>
+<div id="motioner" onclick="motionPath()"></div>
+<div data-markdown>
+    ```css
+    #motioner {
+      motion-path: path("M200 200 S 200.5 200.1 348.7 184.4z");
+    }
+    ```
+
+    ```js
+    var m = document.getElementById('motioner');
+    m.animate([
+      { motionOffset: 0 },
+      { motionOffset: '100%' }
+    ], 1000);
+    ```
+</div>
+
+<textarea class="editor-box" style="height:30px;top:0;" id="pathEditor">M200 200 S 200.5 200.1 348.7 184.4z</textarea>
+
+</section>
+<section>
+    <iframe data-src="./codepen/css-motion-path-airplane"></iframe>
+</section>
+
+<section>
+    <iframe data-src="./codepen/css-motion-path-spiral"></iframe>
+</section>
+
+<style type="text/css">
+#motioner {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    top: 0;
+    left: 800px;
+    position: fixed;
+    background: red;
+    border-radius: 50%;
+    z-index: 322;
+    motion-path: path("M200 200 S 200.5 200.1 348.7 184.4z");
+}
+
+</style>
+
+<script type="text/javascript">
+/**
+// svg path动作定义
+M = moveto
+L = lineto
+H = horizontal lineto
+V = vertical lineto
+C = curveto
+S = smooth curveto
+Q = quadratic Belzier curve
+T = smooth quadratic Belzier curveto
+A = elliptical Arc
+Z = closepath
+ */
+
+function motionPath() {
+    var m = document.getElementById('motioner');
+    m.style.motionPath = 'path("' + pathEditor.value + '")'
+    m.animate([
+      { motionOffset: 0 },
+      { motionOffset: '100%' }
+    ], 1000);
+}
+</script>

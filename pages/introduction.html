@@ -1,0 +1,166 @@
+<section id="mustache-in-css">
+    <iframe scrolling='no' 
+    src='./codepen/mustache-in-css/' style="background: #FFF;" 
+    frameborder='no' allowtransparency='true' allowfullscreen='true'>
+    </iframe>
+</section>
+
+<section class="caption" id="introduction" data-markdown>
+<script type="text/template">
+    # 前端插画
+    ### CSS隐藏绘画技巧
+</script>
+</section>
+
+<section>
+<div data-markdown>
+## 绘画接口
+
+- Line
+- Arc
+- Rect
+- Circle
+- Polygon
+- Path
+- Stroke
+- Fill
+- ...
+
+</div>
+</section>
+
+<section>
+<div data-markdown>
+# NOT SUPPORTED! 😓
+</div>
+</section>
+
+<section>
+    <h1>为什么还要用CSS绘图？</h1>
+    <h3 class="fragment">因为CSS是最神奇的语言！</h3>
+    <h3 class="fragment">这么写，bigger一些</h3>
+    <h3 class="fragment">不会切图！</h3>
+</section>
+
+<section>
+<h2>CSS的真相</h2>
+<ul>
+    <li class="fragment">CSS是声明式语言</li>
+    <li class="fragment">CSS绘图的思想是组装、变形、装饰</li>
+    <li class="fragment">CSS绘图是对已有事物的加工利用、改造</li>
+    <li class="fragment">CSS绘图是一个打磨过程，而不是命令式地编程</li>
+    <li class="fragment">CSS所有原件就是具有盒子模型的标签元素</li>
+</ul>
+</section>
+
+<section>
+    <img src="./images/lego.jpg" width="45%">
+    <img src="./images/cilip.jpg" width="45%">
+</section>
+
+<section>
+<h3>CSS绘图的利器</h3>
+
+<div class="fragment prop-box" data-markdown>
+
+## 盒子
+
+- width/height
+- padding
+- border
+- margin
+
+## 边框
+- border
+- border-radius
+- outline
+- box-shadow
+
+
+## 元素
+- :before
+- :after
+
+</div>
+
+<p class="prop-box fragment" data-markdown>
+
+## 计算
+- calc
+- variable
+- counter
+- attr
+
+## 转换变形
+- transform
+- rotate
+- scale
+- skew
+- translate
+- matrix
+- position
+
+</p>
+
+
+<p class="prop-box fragment" data-markdown>
+## 动画
+- animal + keyframes
+- transition + beizer
+- motion-path
+
+## 交互
+- :hover
+- :target
+- js-interactive
+
+## 背景、渐变、滤镜
+- background: color, image, gradient
+- background-clip
+- filter
+- blur
+
+</p>
+</section>
+
+<style type="text/css">
+.prop-box {
+    font-size: 1.5rem !important;
+    display: inline-block;
+    width: 32%;
+    vertical-align: top!important;
+}
+
+.prop-box h2{
+    margin-top: 50px;
+}
+
+.prop-box h2:first-child {
+    margin-top: 10px !important;
+}
+</style>
+
+
+<style type="text/css">
+body {
+//    background-image: url(http://cn.bing.com/az/hprichbg/rb/TrakaiIslandCastle_ZH-CN14067567252_1920x1080.jpg);
+}
+
+.caption h1 {
+    font-size: 4.5em;
+}
+.caption h2 {
+    font-size: 2.5em;
+}
+
+.caption h3 {
+    font-size: 1.5em;
+}
+
+.reveal section img {
+    border: none;
+}
+.present [data-markdown] {
+    text-align: left;
+}
+</style>

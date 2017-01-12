@@ -1,0 +1,78 @@
+
+html, body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+body {
+  background: #261A06;
+  -webkit-perspective: 1500px;
+          perspective: 1500px;
+  -webkit-perspective-origin: 60% 10%;
+          perspective-origin: 60% 10%;
+  font: 400 normal 120%/1.1 "Open Sans", sans-serif; 
+}
+
+article {
+  position: absolute;
+  -webkit-transform-style:preserve-3d;
+          transform-style:preserve-3d;
+  -webkit-transform: rotateX(-0deg) rotateY(0deg);
+          transform: rotateX(-0deg) rotateY(0deg);
+
+  width:10px;
+  height:10px;
+  border-radius: 5px;        
+  background: red;
+}
+
+section {
+  -webkit-transform-style:preserve-3d;
+          transform-style:preserve-3d;
+  position: absolute;
+  width:200px;
+  height:1px;
+  background: #fffcfc;
+  box-shadow: 0 0 1.5px 0px #fffcfc;
+  -webkit-transform-origin: 0 50%;
+          transform-origin: 0 50%;
+}
+
+figure {
+  margin: 0;
+  box-sizing: border-box;
+  position: absolute;
+
+  background: lightseagreen;
+  box-shadow: 0 0 12px 2px lightseagreen;
+  opacity: 0.4;
+  -webkit-filter: blur(2px);
+          filter: blur(2px);
+  border-radius:6px;
+}
+#eye {
+  width:40px;
+  height:40px;
+  position:absolute;
+  border-radius: 40px;
+  border:10px rgba(255,0,0,0.5) solid;
+  margin-left: -20px;
+  margin-top: -20px;
+}
+#eye:after{
+  position: absolute;
+  top:60px;
+  width:140px;
+  text-transform: uppercase;
+  margin-left: -45px;
+  content:'Point of view';
+}
+aside {
+  position: absolute;
+  width:200px;
+  margin: 2em;
+  color: snow;
+}

@@ -1,0 +1,3 @@
+A Pen created at CodePen.io. You can find this one at http://codepen.io/linkwisdom/pen/vgOqmG.
+
+ People are visual learners and after teaching the CSS Box Model to a class @GA, I thought I'd put together an interactive demo to show how all the various properties work together under different box-sizing conditions and how CSS shorthand properties margin, padding and border-width work...

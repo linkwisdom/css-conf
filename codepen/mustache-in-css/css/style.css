@@ -1,0 +1,114 @@
+.mustache {
+  position: relative;
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  font-size: 6vmin;
+  box-shadow: 1.125em 2.799em, -1.125em 2.799em;
+}
+.mustache::before, .mustache::after {
+  content: '';
+  position: absolute;
+  top: 1em;
+  width: 5em;
+  height: 5em;
+  border-bottom: 3em solid;
+}
+.mustache::before {
+  right: 3.375em;
+  border-bottom-left-radius: 100%;
+  -webkit-transform: rotate(-30deg);
+          transform: rotate(-30deg);
+  -webkit-transform-origin: 100% 2em;
+          transform-origin: 100% 2em;
+}
+.mustache::after {
+  left: 3.375em;
+  border-bottom-right-radius: 100%;
+  -webkit-transform: rotate(30deg);
+          transform: rotate(30deg);
+  -webkit-transform-origin: 0% 2em;
+          transform-origin: 0% 2em;
+}
+
+.mustache:hover::before {
+  -webkit-transform: rotate(-20deg);
+          transform: rotate(-20deg);
+}
+.mustache:hover::after {
+  -webkit-transform: rotate(20deg);
+          transform: rotate(20deg);
+}
+
+.box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100%;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.intro {
+  width: 90%;
+  max-width: 36rem;
+  padding-bottom: 1rem;
+  margin: 0 auto 1em;
+  padding-top: .5em;
+  font-size: calc(1rem + 2vmin);
+  text-transform: capitalize;
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+.intro small {
+  display: block;
+  opacity: .5;
+  font-style: italic;
+  text-transform: none;
+}
+
+.info {
+  margin: 0;
+  padding: 1em;
+  font-size: .9em;
+  font-style: italic;
+  font-family: serif;
+  text-align: right;
+  opacity: .5;
+}
+.info a {
+  color: inherit;
+}

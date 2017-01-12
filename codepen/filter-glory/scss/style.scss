@@ -1,0 +1,23 @@
+.infrared-effect {
+  $url : url(../WechatIMG1.jpeg);
+
+  background-image: $url;
+  background-size: cover;
+  background-position: center;
+  filter: hue-rotate(180deg) saturate(2);
+}
+
+[class$=-effect] img {
+	vertical-align: top !important;
+	margin: 0 !important;
+	opacity: 0 !important;
+}
+
+/* CodePen Styles */
+body {
+	display: flex;
+	height: 100vh;
+}
+div {
+	margin: auto;
+}

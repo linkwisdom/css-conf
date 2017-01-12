@@ -1,0 +1,66 @@
+<section>
+# 伪元素 [ pseudo element ]
+</section>
+
+<section id="pseudo" data-markdown>
+
+<div data-markdown>
+```css
+div::after {
+    content: '\056'
+}
+```
+
+```css
+a:before { content: "🐺"; }
+a:after { content: "🐯"; }
+```
+
+```css
+h2:after { content:"(" attr(href) ")"; }
+```
+</div>
+
+<a class="dragon">🐺</a>
+
+<a class="d2" href="http://e.sm.cn">🐲</a>
+</section>
+
+
+<section>
+<div data-markdown>
+- 显示计数 counter
+
+```css
+li:before {
+    counter-increment: chapter;
+    content: "Chapter " counter(chapter) ": ";
+}
+```
+</div>
+
+<ul id="counter-list">
+    <li>one</li>
+    <li>two</li>
+    <li>three</li>
+</ul>
+</section>
+
+<style type="text/css">
+#pseudo .dragon::before { content: "🐲"; }
+#pseudo .dragon::after { content: "🐯"; }
+#pseudo .d2:after { content:"(" attr(href) ")"; display: none;}
+#pseudo .d2:hover::after {display: block;}
+
+#counter-list {
+    counter-reset: chapter;
+    margin-left: 40px;
+    font-size: 16px;
+    background: #333;
+}
+
+#counter-list li:before {
+    counter-increment: chapter;
+    content: "Chapter" counter(chapter) ": "
+}
+</style>

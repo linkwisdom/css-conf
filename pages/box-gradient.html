@@ -1,0 +1,33 @@
+<section id="box-gradient">
+    <code style="font-size: 16px">
+        background: linear-gradient(angle, color-stop1, color-stop2);
+    </code>
+    <div class="linear-gradient" style="height: 50px;"></div>
+</section>
+
+<section>
+    <div class="box radial-gradient"></div>
+    <div class="box repeating-radial-gradient"></div>
+</section>
+
+<style type="text/css">
+.box {
+    width: 200px;
+    height: 200px;
+}
+
+.linear-gradient {
+    width: 80%;
+    margin: 0 auto;
+    height: 40px;
+    background: linear-gradient(45deg, red, green, blue);
+}
+
+.box.radial-gradient {
+    background: radial-gradient(red, red, green, blue);
+}
+
+.box.repeating-radial-gradient {
+    background: repeating-radial-gradient(red, yellow 10%, green 15%);
+}
+</style>

@@ -1,0 +1,141 @@
+<section id="border-radius">
+<div data-markdown>
+## 如何打破盒子边界，获取不规则图形？
+</div>
+</section>
+
+<section class="radius">
+<div class="box tl"></div>
+<div class="box tr"></div>
+<div class="box bl"></div>
+<div class="box br"></div>
+</section>
+
+<section class="radius mr" >
+<div class="sp">
+    <div class="dot"></div>
+    <div class="line"></div>
+    <div class="plastic"></div>
+    <div class="eclipse"></div>
+</div>
+
+<div class="fragment">
+    <div class="box triangle"></div>
+    <div class="box leaf"></div>
+    <div class="box plane"></div>
+    <div class="box pie"></div>
+</div>
+</section>
+
+<section>
+<iframe height='600' scrolling='no' src='./codepen/box-radius/' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'></iframe>
+</section>
+
+<style type="text/css">
+
+.radius {
+    text-align: center;
+}
+
+.radius .sp>div {
+    margin: 20px 100px;
+}
+
+.radius .dot {
+    border: 50px solid rgba(255, 193, 7, 0.61);
+    border-radius: 50px;
+    display: inline-block;
+}
+
+.radius .line {
+    width: 0px;
+    height: 100px;
+    border: 2px solid #FFEB3B;
+    transform: rotate(30deg) translate(25px, -26px);
+    display: inline-block;
+}
+
+.radius .plastic {
+    width: 150px;
+    height: 150px;
+    background: #3F51B5;
+    transform: rotate(-30deg) translate(25px, -26px);
+    display: inline-block;
+}
+
+.radius .eclipse {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #F44336;
+    transform: rotate(-30deg) translate(25px, -26px) scaleX(3);
+    display: inline-block;
+}
+
+
+.radius .box {
+    width: 0px;
+    height: 0px;
+    border: 50px solid #C11;
+    display: inline-block;
+    margin: 50px;
+    background: transparent;
+}
+
+.radius .box.tl {
+    border-top-left-radius: 50px;
+}
+
+.radius .box.tr {
+    border-top-right-radius: 50px;
+}
+
+.radius .box.bl {
+    border-bottom-left-radius: 50px;
+}
+
+.radius .box.br {
+    border-bottom-right-radius: 50px;
+}
+.radius .box.all {
+    border-radius: 50px;
+}
+
+.radius .box.triangle {
+    border-color: transparent;
+    border-bottom-color: #795548;
+}
+
+.box.leaf {
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-color: green;
+}
+
+.box.pie {
+    border-radius: 50px;
+    border-left-color: green;
+    border-right-color: orange;
+    border-bottom-color: blue;
+}
+
+.box.plane {
+    border-bottom-right-radius: 50px;
+    border-left-width: 150px;
+    border-color: transparent;
+    border-left-color: #2196F3;
+    transform: rotate(-30deg) translate(25px, -26px);
+}
+
+.box.plane:after {
+    content: '';
+    width: 150px;
+    height: 2px;
+    display: block;
+    position: absolute;
+    background: #000;
+    top: 0;
+    left: -150px;
+}
+
+</style>

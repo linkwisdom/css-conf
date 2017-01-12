@@ -1,0 +1,114 @@
+<section id="box-model" data-markdown>
+<script type="text/template">
+# 盒子模型 [ box-model ]
+</script>
+</section>
+
+<section class="fp-section">
+  <iframe height='600' scrolling='no' data-src='./codepen/box-model/'
+  frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'></iframe>
+</section>
+
+<section>
+    <div class="box-row">
+      <div class="squator-box circle"></div>
+      <div class="squator-box body"></div>
+      <div class="leg-box"></div>
+      <div class="leg-box" style="left: 280px"></div>
+    </div>
+    <aside class="notes">
+        通过调整边框大小，组合也能获得简单地积木图形。
+    </aside>
+</section>
+
+<style type="text/css">
+.box-row {
+    position: relative;
+    height: 600px;
+    width: 300px;
+    margin: 20px auto !important;
+}
+
+.box-row>div {
+    display: inline-block;
+    background: #FFF;
+    margin: 1px;
+    position: absolute;
+}
+
+.leg-box {
+    width: 20px;
+    height: 100px;
+    top: 250px;
+    left: 200px;
+}
+
+.squator-box {
+    width: 100px;
+    height: 100px;
+    top: 150px;
+    left: 200px;
+}
+
+.squator-box.body:after,
+.squator-box.body:before {
+    content: '';
+    width: 100px;
+    height: 50px;
+    background: #FFF;
+    position: absolute;
+}
+
+.squator-box.body:before {
+    left: -80px;
+}
+
+.squator-box.body:after {
+    right: -80px;
+}
+
+.circle {
+    border-radius: 50%;
+    top: 50px;
+    left: 200px;
+}
+
+.circle.head:after,
+.circle.head:before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-radius: 5px; 
+    background: #000;
+    box-shadow: 0 0 15px #000;
+    position: absolute;
+}
+
+.circle.head:before {
+    left: calc(20px + var(--mouse-x) * 20px);
+    top: calc(20px + var(--mouse-y) * 20px);
+}
+
+.circle.head:after {
+    left: calc(60px + var(--mouse-x)  * 20px);
+    top: calc(20px + var(--mouse-y) * 20px);
+}
+
+.head {
+    border-top-left-radius: 0;
+}
+
+.head .mouse {
+    position: absolute;
+    top: 49px;
+    left: 39px;
+    background: #FFF;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    box-shadow: calc(var(--mouse-x) * 5px) calc(2px + var(--mouse-y) * 10px) 1px #000;
+}
+
+
+
+</style>

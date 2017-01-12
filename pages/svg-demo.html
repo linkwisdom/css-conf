@@ -1,0 +1,81 @@
+<section class="caption" id="svg-demo" data-markdown>
+<script type="text/template">
+    ## SVG插画
+
+    - 矢量图
+    - 支持变换、描边、动画
+    - 浏览器兼容性好
+    - CSS样式控制
+    - JS调用控制
+</script>
+</section>
+
+<section id="line-control" style="top: 181.5px; display: block;" class="present">
+<div class="line-control__svg-container">
+    <svg id="js-svg-line-control" xmlns="http://www.w3.org/2000/svg" width="800" viewBox="0 0 581 98">
+        <path id="js-line-path" d="M62.9 14.9c-25-7.74-56.6 4.8-60.4 24.3-3.73 19.6 21.6 35 39.6 37.6 42.8 6.2 72.9-53.4 116-58.9 65-18.2 191 101 215 28.8 5-16.7-7-49.1-34-44-34 11.5-31 46.5-14 69.3 9.38 12.6 24.2 20.6 39.8 22.9 91.4 9.05 102-98.9 176-86.7 18.8 3.81 33 17.3 36.7 34.6 2.01 10.2.124 21.1-5.18 30.1" stroke="#0171bb" stroke-width="2" fill="none" stroke-dasharray="" stroke-dashoffset="0.00" style="stroke-dasharray: 942px; stroke-dashoffset: 50px;"></path>
+    </svg>
+</div>
+
+<div class="line-control__control">
+    <div class="line-control__element" id="js-line-control-dasharray">
+        <div class="line-control__title"><span class="line-control__label">stroke-dasharray:</span><span class="line-control__value">942</span><span class="line-control__value">942</span></div>
+        <div class="line-control__bar">
+            <input type="range" min="0" max="1" step="any" value="0">
+        </div>
+    </div>
+    <div class="line-control__element" id="js-line-control-dashoffset">
+        <div class="line-control__title"><span class="line-control__label">stroke-dashoffset: </span><span class="line-control__value">50</span></div>
+        <div class="line-control__bar">
+            <input type="range" min="0" max="1" step="any" value="0">
+        </div>
+    </div>
+</div>
+</section>
+        
+
+<section id="text-path" class="present" style="top: 82.5px; display: block;">
+<svg id="js-svg-text-path" xmlns="http://www.w3.org/2000/svg" width="960" viewBox="0 0 581 120">
+    <defs>
+        <path d="M62.9 14.9c-25-7.74-56.6 4.8-60.4 24.3-3.73 19.6 21.6 35 39.6 37.6 42.8 6.2 72.9-53.4 116-58.9 65-18.2 191 101 215 28.8 5-16.7-7-49.1-34-44-34 11.5-31 46.5-14 69.3 9.38 12.6 24.2 20.6 39.8 22.9 91.4 9.05 102-98.9 176-86.7 18.8 3.81 33 17.3 36.7 34.6 2.01 10.2.124 21.1-5.18 30.1" id="text-p1"></path>
+    </defs>
+    <path stroke="#0171bb" d="M62.9 14.9c-25-7.74-56.6 4.8-60.4 24.3-3.73 19.6 21.6 35 39.6 37.6 42.8 6.2 72.9-53.4 116-58.9 65-18.2 191 101 215 28.8 5-16.7-7-49.1-34-44-34 11.5-31 46.5-14 69.3 9.38 12.6 24.2 20.6 39.8 22.9 91.4 9.05 102-98.9 176-86.7 18.8 3.81 33 17.3 36.7 34.6 2.01 10.2.124 21.1-5.18 30.1" fill="none" stroke-width="0.3" stroke-dasharray="5 5"></path>
+    <text>
+        <textPath xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#text-p1" class="svg__text-path" textLength="400" startOffset="250">svg textPath元素可以让文字随着指定路径排列</textPath>
+    </text>
+<desc>Created with Snap</desc>
+</svg>
+<pre><code class="html hljs xml" data-trim="" data-noescape=""><span class="hljs-tag">&lt;<span class="hljs-name">defs</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">path</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"p1"</span>
+    <span class="hljs-attr">d</span>=<span class="hljs-string">"M62.9 14.9c-25-7.74-56.6 4.8-60.4 24.3-3.73 19.6 21.6..."</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">path</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">defs</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">text</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">textPath</span> <span class="hljs-attr">xlink:href</span>=<span class="hljs-string">"#p1"</span> <span class="hljs-attr">textLength</span>=<span class="hljs-string">"400"</span>  <span class="hljs-attr">startOffset</span>=<span class="hljs-string">"</span></span><span id="js-path-startOffset"><span class="hljs-tag"><span class="hljs-string">250</span></span></span><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>
+    svg textPath元素可以让文字随着指定路径排列
+    <span class="hljs-tag">&lt;/<span class="hljs-name">textPath</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span></code></pre>
+</section>
+
+<section>
+    <img src="./svg/linedraw/animate-ff.svg">
+</section>
+
+<section>
+    <img src="./svg/linedraw/animate-ff.svg">
+</section>
+
+<style type="text/css">
+.blob {
+    width: 45px;
+    height: 55px;
+    margin: 20px;
+    background: red;
+}
+
+#text-path {
+    font-size: 14px;
+    color: #FFF;
+}
+</style>

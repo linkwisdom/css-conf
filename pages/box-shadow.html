@@ -1,0 +1,295 @@
+<section data-markdown>
+
+<script id="box-shadow" type="text/template">
+# 阴影 [ box-shadow ]
+</script>
+
+</section>
+
+<section>
+<table class="dataintable">
+<tbody><tr><th style="width:25%;">值</th><th>描述</th></tr>
+
+<tr><td><i>h-shadow</i></td><td>必需。水平阴影的位置。允许负值。</td></tr>
+
+<tr><td><i>v-shadow</i></td><td>必需。垂直阴影的位置。允许负值。</td></tr>
+
+<tr><td><i>blur</i></td><td>可选。模糊距离。</td></tr>
+
+<tr><td><i>spread</i></td><td>可选。阴影的尺寸。</td></tr>
+
+<tr><td><i>color</i></td><td>可选。阴影的颜色</td></tr>
+
+<tr><td>inset</td><td>可选。将外部阴影 (outset) 改为内部阴影。</td></tr>
+</tbody>
+</table>
+
+<div style="text-align: center;margin: 20px; font-size: 18px; color: #EEE">
+box-shadow: h-shadow v-shadow blur spread color inset;
+</div>
+
+</section>
+
+<section>
+    <div id="sbox" class="shadow-box"></div>
+    <textarea class="editor-box" onkeyup="changeCSS()" style="right:500px">
+        border-radius: 50%;
+    </textarea>
+    <textarea class="editor-box" ondblclick="getPoints(150)" onkeyup="changeShadow()">0px 0px 5px 10px pink inset</textarea>
+
+</section>
+
+<section>
+<iframe height='600' scrolling='no' style="background: transparent;" src='./codepen/css-mario/' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'></iframe>
+<div class="mario-box" data-markdown>
+
+```css
+.icon.mario {
+    width: 30px;
+    height: 30px;
+margin:30px 50px;    
+box-shadow:
+    180px 0 0 red,
+    210px 0 0 red,
+    240px 0 0 red,
+    270px 0 0 red,
+    300px 0 0 red,
+    150px 30px 0 red,
+    180px 30px 0 red,
+    210px 30px 0 red,
+    240px 30px 0 red,
+    270px 30px 0 red,
+    300px 30px 0 red,
+    330px 30px 0 red,
+    360px 30px 0 red,
+    390px 30px 0 red,
+    150px 60px 0 saddlebrown,
+    180px 60px 0 saddlebrown,
+    210px 60px 0 saddlebrown,
+    240px 60px 0 lightsalmon,
+    270px 60px 0 lightsalmon,
+    300px 60px 0 black,
+    330px 60px 0 lightsalmon,
+    120px 90px 0 saddlebrown,
+    150px 90px 0 lightsalmon,
+    180px 90px 0 saddlebrown,
+    210px 90px 0 lightsalmon,
+    240px 90px 0 lightsalmon,
+    270px 90px 0 lightsalmon,
+    300px 90px 0 black,
+    330px 90px 0 lightsalmon,
+    360px 90px 0 lightsalmon,
+    390px 90px 0 lightsalmon,
+    120px 120px 0 saddlebrown,
+    150px 120px 0 lightsalmon,
+    180px 120px 0 saddlebrown,
+    210px 120px 0 saddlebrown,
+    240px 120px 0 lightsalmon,
+    270px 120px 0 lightsalmon,
+    300px 120px 0 lightsalmon,
+    330px 120px 0 black,
+    360px 120px 0 lightsalmon,
+    390px 120px 0 lightsalmon,
+    420px 120px 0 lightsalmon,
+    120px 150px 0 saddlebrown,
+    150px 150px 0 saddlebrown,
+    180px 150px 0 lightsalmon,
+    210px 150px 0 lightsalmon,
+    240px 150px 0 lightsalmon,
+    270px 150px 0 lightsalmon,
+    300px 150px 0 black,
+    330px 150px 0 black,
+    360px 150px 0 black,
+    390px 150px 0 black,
+    180px 180px 0 lightsalmon,
+    210px 180px 0 lightsalmon,
+    240px 180px 0 lightsalmon,
+    270px 180px 0 lightsalmon,
+    300px 180px 0 lightsalmon,
+    330px 180px 0 lightsalmon,
+    360px 180px 0 lightsalmon,
+    150px 210px 0 blue,
+    180px 210px 0 blue,
+    210px 210px 0 red,
+    240px 210px 0 blue,
+    270px 210px 0 blue,
+    300px 210px 0 red,
+    120px 240px 0 blue,
+    120px 240px 0 blue,
+    120px 240px 0 blue,
+    150px 240px 0 blue,
+    180px 240px 0 blue,
+    210px 240px 0 red,
+    240px 240px 0 blue,
+    270px 240px 0 blue,
+    300px 240px 0 red,
+    330px 240px 0 blue,
+    360px 240px 0 blue,
+    390px 240px 0 blue,
+    90px 270px 0 blue,
+    120px 270px 0 blue,
+    150px 270px 0 blue,
+    180px 270px 0 blue,
+    210px 270px 0 red,
+    240px 270px 0 red,
+    270px 270px 0 red,
+    300px 270px 0 red,
+    330px 270px 0 blue,
+    360px 270px 0 blue,
+    390px 270px 0 blue,
+    420px 270px 0 blue,
+    90px 300px 0 lightsalmon,
+    120px 300px 0 lightsalmon,
+    150px 300px 0 blue,
+    180px 300px 0 red,
+    210px 300px 0 yellow,
+    240px 300px 0 red,
+    270px 300px 0 red,
+    300px 300px 0 yellow,
+    330px 300px 0 red,
+    360px 300px 0 blue,
+    390px 300px 0 lightsalmon,
+    420px 300px 0 lightsalmon,
+    90px 330px 0 lightsalmon,
+    120px 330px 0 lightsalmon,
+    150px 330px 0 lightsalmon,
+    180px 330px 0 red,
+    210px 330px 0 red,
+    240px 330px 0 red,
+    270px 330px 0 red,
+    300px 330px 0 red,
+    330px 330px 0 red,
+    360px 330px 0 lightsalmon,
+    390px 330px 0 lightsalmon,
+    420px 330px 0 lightsalmon,
+    90px 360px 0 lightsalmon,
+    120px 360px 0 lightsalmon,
+    150px 360px 0 red,
+    180px 360px 0 red,
+    210px 360px 0 red,
+    240px 360px 0 red,
+    270px 360px 0 red,
+    300px 360px 0 red,
+    330px 360px 0 red,
+    360px 360px 0 red,
+    390px 360px 0 lightsalmon,
+    420px 360px 0 lightsalmon,
+    150px 390px 0 red,
+    180px 390px 0 red,
+    210px 390px 0 red,
+    300px 390px 0 red,
+    330px 390px 0 red,
+    360px 390px 0 red,
+    120px 420px 0 saddlebrown,
+    150px 420px 0 saddlebrown,
+    180px 420px 0 saddlebrown,
+    330px 420px 0 saddlebrown,
+    360px 420px 0 saddlebrown,
+    390px 420px 0 saddlebrown,
+    90px 450px 0 saddlebrown,
+    120px 450px 0 saddlebrown,
+    150px 450px 0 saddlebrown,
+    180px 450px 0 saddlebrown,
+    330px 450px 0 saddlebrown,
+    360px 450px 0 saddlebrown,
+    390px 450px 0 saddlebrown,
+    420px 450px 0 saddlebrown;
+}
+```
+</div>
+</section>
+
+<script type="text/javascript">
+    function changeShadow() {
+        sbox.style.boxShadow = event.target.value.trim()
+    }
+    function changeCSS() {
+        var content = event.target.value;
+        var list = content.split(';')
+        for (var line of list) {
+            if (!line.trim()) {
+                continue
+            }
+            var ss = line.split(':');
+            if (ss.length !== 2) {
+                continue
+            }
+            var rkey = ss[0].trim().replace(/-([a-z])/g, function (s, c) {
+                return c.toUpperCase()
+            });
+            debugger
+            sbox.style[rkey] = ss[1].trim();
+        }
+    }
+    function setShadow() {
+        sbox.style.boxShadow = event.target.querySelector('span').textContent.trim()
+    }
+
+    function rd(range) {
+        return parseInt(Math.random() * range)
+    }
+    function getPoints(size) {
+        let pics = Array.call([], size).fill('');
+        for (let i in pics) {
+            var x = rd(1600) - 50;
+            var y = rd(700) - 200;
+            var r = rd(60);
+            var cr = rd(255);
+            var cg = rd(255);
+            var cb = rd(255);
+            pics[i] = `${x}px ${y}px ${r}px ${r}px rgba(${cr},${cg},${cb},0.5)`
+        }
+        if (event.target) {
+            event.target.value = pics.join(',\n');
+        }
+        return pics.join(',\n')
+    }
+</script>
+
+<style type="text/css">
+
+.shadow-box {
+    background-color:yellow;
+    width: 50px;
+    height: 50px;
+    box-shadow: 0px 0px 5px 10px pink inset;
+}
+.mario-box {
+    position: absolute;
+    width: 500px;
+    height: 700px;
+    right: 20px;
+    font-size: 16px;
+    top: 10px;
+}
+
+.mario-box pre code {
+    max-height: 700px;
+    background: transparent;
+    display: none;
+}
+
+.mario-box:hover code {
+    display: block;
+}
+
+.editor-box {
+    width: 400px;
+    height: 10em;
+    font-size: 20px;
+    position: absolute;
+    right: 50px;
+    top: 10px;
+    border: 1px solid #333;
+    padding: 20px;
+    background: transparent;
+    color: #333;
+    line-height: 2em;
+    outline: 1px dashed #333;
+}
+
+.editor-box:hover {
+    color: #FFF;
+    outline: 1px dashed #FFF;
+}
+</style>
